@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3> <u> Event Propagation:-
+    </u></h3><br>
+       <u> Definition:-</u>  Event propagation refers to the flow of events through the DOM in two phases:<br><br>
+
+       Capturing phase: The event goes from the root to the target.<br><br>
+       Bubbling phase: The event bubbles up from the target to the root 
+    </p>
+    <p>Example:-</p>
+    <div id="outer" style="padding:20px; background-color:lightgray;">
+        Outer Div
+        <div id="inner" style="padding:20px; background-color:orange;">
+          Inner Div
+          <button id="button">Click me</button>
+        </div>
+      </div>
+      
+      <script>
+        document.getElementById("outer").addEventListener("click", function() {
+          alert("Outer div clicked");
+        });
+      
+        document.getElementById("inner").addEventListener("click", function() {
+          alert("Inner div clicked");
+        });
+      
+        document.getElementById("button").addEventListener("click", function(event) {
+          alert("Button clicked");
+          event.stopPropagation();  // Stops further propagation
+        });
+      </script>
+      
+</body>
+</html>

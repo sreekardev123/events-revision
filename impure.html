@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3> <u>ImPure Function :-
+    </u></h3><br>
+       <u> Definition:-</u> : An impure function is one that may produce different results even with the same input, or that causes side effects such as modifying external variables, performing I/O operations, etc.
+    </p>
+    <p>Example:-</p>
+    <script>
+       let count = 0;
+
+function increment() {
+  count += 1;
+  return count;
+}
+
+console.log(increment());  // Output: 1
+console.log(increment());  // Output: 2
+console.log(increment());  // Output: 3
+
+    </script>
+</body>
+</html>
